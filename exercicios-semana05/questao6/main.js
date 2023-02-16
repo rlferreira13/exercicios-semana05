@@ -46,8 +46,12 @@ O programa para de funcionar!
 
 Você tem a tarefa de remover a necessidade de importar os scripts “Calculadora.js” e “soma.js” do arquivo index.html, importando apenas o main.js na página index.html. Refatore este código para utilizar módulos e deixe a sua equipe feliz! */
 
-
+import calculadora from './calculadora.js'
 import {soma} from'./calculadora.js';
 import {subtracao} from './calculadora.js';
+
 soma(2, 2);
 subtracao(2,2);
+
+calculadora.soma(2,2);
+calculadora.subtracao(2,2);
