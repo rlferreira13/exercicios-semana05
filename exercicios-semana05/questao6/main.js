@@ -1,50 +1,30 @@
-/*Você recebeu o seguinte programa:
+/* No seu programa de calculadora (veja exercício 5), a equipe está novamente insatisfeita com a forma como as coisas estão estruturadas. Eles adicionaram o módulo:
 
-index.html
+subtracao.js
 
-<!DOCTYPE html>
-<html>
+‌function subtracao(a, b) {
+  console.log("Resultado da subtração:", a - b);
+}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Calculadora</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+export default subtracao;
+Eles agora gostariam de poder usar destas formas:
 
-<body>
-  <script src="soma.js"></script>
-  <script src="Calculadora.js"></script>
-  <script src="main.js"></script>
-</body>
+Forma 1, sem instanciar a classe:
 
-</html>
 main.js
 
-const calculadora = new Calculadora();
+‌import calculadora from "./calculadora.js"
+
 calculadora.somar(2, 2)
-Calculadora.js
+calculadora.subtrair(2, 2)
+Forma 2, podendo importar somente uma das operações:
 
-class Calculadora {
-  somar(a, b) {
-    soma(a, b)
-  }
-}
-soma.js
+main.js
 
-function soma(a, b) {
-  console.log('O resultado é:', a + b);
-}
-Os desenvolvedores estão reclamando que se você fizer os imports dos javascripts em ordem diferente , como por exemplo:
+import { somar } from "./calculadora.js"
 
-<body>
-    <script src="Calculadora.js"></script>
-    <script src="main.js"></script>
-    <script src="soma.js"></script>
-</body>
-O programa para de funcionar!
-
-Você tem a tarefa de remover a necessidade de importar os scripts “Calculadora.js” e “soma.js” do arquivo index.html, importando apenas o main.js na página index.html. Refatore este código para utilizar módulos e deixe a sua equipe feliz! */
+somar(2, 2)
+Cabe a você refatorar o código para que o módulo calculadora permita o que a equipe deseja. */
 
 import calculadora from './calculadora.js'
 import {soma} from'./calculadora.js';

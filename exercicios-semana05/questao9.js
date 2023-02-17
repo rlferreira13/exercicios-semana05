@@ -22,7 +22,8 @@ const reqs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 async function listarFilmesporIds() {
   for (const req of reqs) {
-    await fakeAPIFilmes(req).then((resultado) => console.log(req, resultado));
+    const resultado = await fakeAPIFilmes(req)
+    console.log(req, resultado);
   }
 }
 
