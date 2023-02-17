@@ -24,6 +24,6 @@ const carros = [
 ];
 
 
-let carrosdaFord = carros.filter(carros=>carros.marca=='Ford').map(carros=>[carros.nome,carros.valor]);
+let carrosdaFord = carros.filter(carros=>carros.marca=='Ford').map(carros=>({nome:carros.nome,valor:carros.valor}));
 
 console.log(carrosdaFord);  
